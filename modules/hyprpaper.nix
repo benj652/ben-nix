@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  wallpaperPath = "/home/benj/ben-nix/wallpapers/blue/wallpaper.png";
+  wallpaperPath = "/home/benj/ben-nix/modules/wallpapers/blue/wallpaper.png";
 in
 {
   # Install the package
