@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./modules/theme.nix
-  ];
   programs.hyprland = {
     enable = true;
 
