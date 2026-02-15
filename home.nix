@@ -13,8 +13,7 @@
   #######################################
   imports = [
      ./modules/hyprland.nix
-     ./modules/hyprpaper.nix   # NEW: declarative hyprpaper module
-     ./modules/theme.nix
+     ./modules/hyprpaper.nix   
    ]; 
   home.file.".config/nvim".source = ./modules/nvim;
   #######################################
