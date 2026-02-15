@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  wallpaperPath = "${config.home.homeDirectory}/documents/projects/ben-nix/modules/wallpapers/blue/wallpaper.png";
+  wallpaperPath = "/home/benj/ben-nix/wallpapers/blue/wallpaper.png";
 in
 {
   # Install the package
@@ -12,7 +12,8 @@ in
   # Write the config file
   home.file.".config/hypr/hyprpaper.conf".text = ''
     preload = ${wallpaperPath}
-    wallpaper = ${wallpaperPath}
+    wallpaper = ,${wallpaperPath}
     splash = false
+    ipc = off
   '';
 }

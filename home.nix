@@ -56,7 +56,41 @@
     wofi
     nitch
     pcmanfm
+    waybar
+    
+    # Theme and icon packages
+    adwaita-icon-theme
+    gnome-themes-extra
+    gtk3
+    gtk4
+    papirus-icon-theme
+    libsForQt5.breeze-icons
   ];
 
+  #######################################
+  # GTK Theme Configuration
+  #######################################
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    cursorTheme = {
+      name = "Adwaita";
+      package = pkgs.gnome-themes-extra;
+    };
+  };
+
+  # Qt theme configuration
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk3";
+    style.name = "adwaita-dark";
+  };
 
 }

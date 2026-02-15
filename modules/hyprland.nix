@@ -9,6 +9,12 @@
 
       monitor = ",preferred,auto,1";
 
+      env = [
+        "GTK_THEME,Adwaita:dark"
+        "XCURSOR_THEME,Adwaita"
+        "XCURSOR_SIZE,24"
+      ];
+
       exec-once = [
         "waybar"
         "hyprpaper"
