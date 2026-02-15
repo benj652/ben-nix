@@ -1,23 +1,49 @@
 { config, pkgs, ... }:
 
 {
+  #######################################
+  # Basic User Info
+  #######################################
   home.username = "benj";
   home.homeDirectory = "/home/benj";
   home.stateVersion = "25.11";
-  programs.git.enable = true;
+
+  #######################################
+  # Import External Configs
+  #######################################
+  home.file.".config/nvim".source = ./modules/nvim;
+
+  #######################################
+  # Programs
+  #######################################
+
+  programs.git = {
+    enable = true;
+  };
+
   programs.bash = {
     enable = true;
+
     shellAliases = {
       bruh = "bruh chungus";
     };
+
     profileExtra = ''
       if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-        exec hyprland
+        exec Hyprland
       fi
     '';
   };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
+  #######################################
+  # Packages
+  #######################################
   home.packages = with pkgs; [
-    neovim
     ripgrep
     nil
     nixpkgs-fmt
