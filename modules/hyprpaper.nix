@@ -13,7 +13,7 @@ in
   home.file.".config/hypr/hyprpaper.conf".text = ''
     preload = ${wallpaperPath}
     wallpaper {
-      monitor = HDMI A-1
+      monitor = HDMI-A-1
       path = ${wallpaperPath}
       fit_mode = fill
     }
