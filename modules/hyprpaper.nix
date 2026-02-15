@@ -15,9 +15,4 @@ in
     wallpaper = ,${wallpaperPath}
     mode = fill
   '';
-
-  # Make Hyprpaper run once when session starts
-  programs.hyprland.settings.exec-once = [
-    "hyprpaper"
-  ];
 }
