@@ -25,7 +25,7 @@
     enable = true;
 
     shellAliases = {
-      bruh = "bruh chungus";
+      bruh = "echo bruh chungus";
       nrs = "sudo nixos-rebuild switch --flake ~/ben-nix#benj-pc";
     };
 
