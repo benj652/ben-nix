@@ -12,12 +12,11 @@
   # Import External Configs
   #######################################
   imports = [
-     ./modules/nvim.nix
      ./modules/hyprland.nix
      ./modules/hyprpaper.nix   # NEW: declarative hyprpaper module
      ./modules/theme.nix
    ]; 
-
+  home.file.".config/nvim".source = ./modules/nvim;
   #######################################
   # Programs
   #######################################
