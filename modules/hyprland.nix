@@ -26,8 +26,6 @@
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
-        "col.active_border" = theme.palette.bg1;
-        "col.inactive_border" = theme.palette.red;
       };
 
       decoration = {
