@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.hyprland = {
+  wayland.windowManager.hyprland = {
     enable = true;
 
     settings = {
