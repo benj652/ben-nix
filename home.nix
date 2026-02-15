@@ -26,7 +26,7 @@
 
     shellAliases = {
       bruh = "bruh chungus";
-      nrs = "sudo nix-rebuild switch --flake ~/ben-nix#benj-pc";
+      nrs = "sudo nixos-rebuild switch --flake ~/ben-nix#benj-pc";
     };
 
     profileExtra = ''
