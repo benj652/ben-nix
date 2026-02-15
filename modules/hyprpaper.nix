@@ -12,8 +12,10 @@ in
   # Write the config file
   home.file.".config/hypr/hyprpaper.conf".text = ''
     preload = ${wallpaperPath}
-    wallpaper = ,${wallpaperPath}
-    splash = false
-    ipc = off
+    wallpaper {
+      monitor = HDMI A-1
+      path = ${wallpaperPath}
+      fit_mode = fill
+    }
   '';
 }
