@@ -16,6 +16,7 @@
      ./modules/hyprpaper.nix   
    ]; 
   home.file.".config/nvim".source = ./modules/nvim;
+  xdg.configFile."waybar/config.jsonc".source = ./modules/waybar/config.jsonc;
   #######################################
   # Programs
   #######################################
@@ -35,7 +36,7 @@
 
     profileExtra = ''
       if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-        exec Hyprland
+        exec start-hyprland
       fi
     '';
   };
