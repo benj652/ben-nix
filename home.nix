@@ -30,6 +30,7 @@
     shellAliases = {
       bruh = "echo bruh chungus";
       nrs = "sudo nixos-rebuild switch --flake ~/ben-nix#benj-pc";
+      vim = "nvim";
     };
 
     profileExtra = ''
