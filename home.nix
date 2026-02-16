@@ -57,6 +57,28 @@
     wofi
     nitch
     pcmanfm
+
+    # Java
+    # jdk
+    # jdt-language-server
+
+    # Lua
+    # lua-language-server
+
+    # Bash
+    # nodePackages.bash-language-server
+
+    # Go
+    # gopls
+
+    # C/C++
+    # clang-tools
+
+    # Web
+    # nodePackages.typescript-language-server
+    # nodePackages.vscode-langservers-extracted
+    # tailwindcss-language-server
+    # texlab
   ];
 
 
