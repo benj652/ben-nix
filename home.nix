@@ -15,7 +15,7 @@
      ./modules/hyprland.nix
      ./modules/hyprpaper.nix   
    ]; 
-  home.file.".config/nvim".source = ./modules/nvim;
+  # home.file.".config/nvim".source = ./modules/nvim;
   xdg.configFile."waybar/config.jsonc".source = ./modules/waybar/config.jsonc;
   #######################################
   # Programs
@@ -38,7 +38,7 @@
     shellAliases = {
       bruh = "echo bruh chungus";
       nrs = "sudo nixos-rebuild switch --flake ~/ben-nix#benj-pc";
-      vim = "nvim";
+      # vim = "nvim";
     };
 
     profileExtra = ''

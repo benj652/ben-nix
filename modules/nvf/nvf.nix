@@ -1,16 +1,17 @@
-{ ... }:
+{ config, pkgs, ... }:
 
 {
   programs.nvf = {
     enable = true;
-    
-    # Your settings need to go into the settings attribute set
-    # most settings are documented in the appendix
+
     settings = {
-      vim.viAlias = true;
-      vim.vimAlias = false;
-      vim.lsp = {
-        enable = true;
+      vim = {
+        viAlias = true;
+        vimAlias = true;
+        lsp.enable = true;
+        treesitter.enable = true;
+        telescope.enable = true;
+        statusline.lualine.enable = true;
       };
     };
   };
