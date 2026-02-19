@@ -7,12 +7,10 @@
 
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
-        "custom/sep",
-        "hyprland/window",
-        "custom/sep"
+        "clock"
     ],
     "modules-center": [
+        "hyprland/workspaces"
     ],
 
     "modules-right": [
@@ -23,12 +21,23 @@
         "custom/sep",
         "memory",
         "custom/sep",
-        "disk",
+        "pulseaudio",
         "custom/sep",
-        "clock",
+        "disk",
         "custom/sep",
         "tray"
     ],
+    
+
+    "pulseaudio": {
+        "format": "Vol: {volume}% {icon}",
+        "format-muted": "Muted ",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
 
     // Modules configuration
     "hyprland/workspaces": {

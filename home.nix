@@ -22,7 +22,14 @@
   #######################################
 
   programs.git = {
-    enable = true;
+     enable = true;
+     settings = {
+       user = {
+         name  = "Ben Jaffe";
+         email = "benjaminjaffe8@gmail.com";
+       };
+       init.defaultBranch = "main";
+     };   
   };
 
   programs.bash = {
