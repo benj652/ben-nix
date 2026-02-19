@@ -34,6 +34,7 @@
             users.benj = { ... }: {
               imports = [
                 nvf.homeManagerModules.default  
+                ./home.nix
                 ./modules/nvf/nvf.nix
               ];
             };
