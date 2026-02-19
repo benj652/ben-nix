@@ -3,24 +3,40 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, home-manager, nvf, ... }: {
     nixosConfigurations.benj-pc = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+
       modules = [
         ./configuration.nix
+
         home-manager.nixosModules.home-manager
+
         {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.benj = import ./home.nix;
             backupFileExtension = "backup";
+
+            users.benj = { ... }: {
+              imports = [
+                nvf.homeManagerModules.default  
+                ./modules/nvf/nvf.nix
+              ];
+            };
           };
         }
       ];
